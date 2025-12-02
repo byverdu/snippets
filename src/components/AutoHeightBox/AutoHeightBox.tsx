@@ -1,5 +1,5 @@
 import type { CSSProperties, JSX } from 'react';
-import { DEFAULT_SPACING_GAP } from '../../constants';
+import { DEFAULT_SPACING_GAP } from '@constants';
 
 type Props = {
   children?: JSX.Element;
