@@ -19,3 +19,31 @@ numberWithinRange(110) // 100
 
 numberWithinRange(10, 15) // 15
 ```
+
+## sleep
+
+For when you need to wait for a certain time before executing next code
+
+```js
+function sleep(duration) {
+  return new Promise(resolve => {
+    const timer = setTimeout(() => {
+      clearTimeout(timer)
+      resolve(true)
+    }, duration)
+  })
+}
+
+sleep(500) // .5 secs
+sleep(1500) // 1.5 sec
+
+```
+
+## Canceable timeout or interval
+
+A function to cancel a timer before it finishes
+
+```js
+
+function cancelTimeOut (callback, delay, ...args) {}
+```
