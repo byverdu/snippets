@@ -16,7 +16,6 @@ export const AutoHeightBox = ({
   ...rest
 }: Props) => (
   <div
-    // data-testid="box"
     ref={node => {
       if (node && node instanceof HTMLElement) {
         if (parentSelector) {
@@ -27,7 +26,7 @@ export const AutoHeightBox = ({
 
             node.style[heightProp] = `${height}px`;
 
-            return undefined;
+            return;
           }
         }
 
