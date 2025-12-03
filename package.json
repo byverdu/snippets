@@ -12,6 +12,16 @@
     "test:watch": "vitest",
     "prepare": "husky"
   },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "eslint"
+    ],
+    "*.md": [
+      "prettier --write",
+      "markdownlint"
+    ]
+  },
   "dependencies": {
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
@@ -30,6 +40,8 @@
     "globals": "^16.5.0",
     "husky": "^9.1.7",
     "jsdom": "^27.2.0",
+    "lint-staged": "^16.2.7",
+    "markdownlint": "^0.39.0",
     "prettier": "^3.7.3",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
