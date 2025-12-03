@@ -6,10 +6,11 @@
  * @returns {Array<Array<unknown>>} A new array containing the chunks.
  */
 export function chunk(array: Array<unknown>, size = 1) {
-  const copy = [...array];
   const result: unknown[] = [];
 
   if (!Array.isArray(array) || size < 1) return result;
+
+  const copy = [...array];
 
   while (copy.length >= 1) {
     result.push(copy.splice(0, size));
