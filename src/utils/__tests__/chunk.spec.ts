@@ -1,4 +1,4 @@
-import { expect, test, vi } from 'vitest';
+import { expect, test } from 'vitest';
 
 import { chunk } from '../chunk';
 
@@ -8,7 +8,7 @@ describe('chunk', () => {
   });
 
   test('should return empty array', () => {
-    expect(chunk(undefined)).toEqual([]);
+    expect(chunk(null)).toEqual([]);
     expect(chunk([undefined], 0)).toEqual([]);
   });
 });

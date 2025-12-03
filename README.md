@@ -1,8 +1,9 @@
 # Snippets
 
-A collection of stuff that I found useful, utils methods, react components and so on...
+A collection of stuff that I found useful, utils methods, react components and
+so on...
 
-### utils methods
+## utils methods
 
 - [clampedValue](src/utils/utils.md#clampedValue)
 - [sleep](src/utils/utils.md#sleep)
