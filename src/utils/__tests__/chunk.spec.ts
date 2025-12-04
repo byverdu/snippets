@@ -14,6 +14,7 @@ describe('chunk', () => {
     [true, []],
     [4, []],
   ])('returns empty array for %o', (input, expected) => {
+    // @ts-expect-error wrong paramaters
     expect(chunk(input)).toEqual(expected);
   });
 

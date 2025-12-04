@@ -15,6 +15,7 @@ describe('clampedValue', () => {
     [{ value: {} }, 0],
     [{ value: [] }, 0],
   ])('clampedValue(%o) -> %d', (value, expected) => {
+    // @ts-expect-error wrong paramaters
     expect(clampedValue(value)).toEqual(expected);
   });
 
