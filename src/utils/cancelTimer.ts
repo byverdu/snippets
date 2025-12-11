@@ -5,8 +5,8 @@ type Args = (...args: any[]) => any;
 
 type Props<T extends Args> = {
   callback: T;
-  timerType: TimerType;
-  delay: number;
+  timerType?: TimerType;
+  delay?: number;
 };
 
 /**
@@ -42,9 +42,13 @@ type Props<T extends Args> = {
  *
  */
 export function cancelTimer<T extends Args>(
-  { timerType, callback, delay }: Props<T>,
+  { timerType = 'setTimeout', callback, delay = 100 } = {} as Props<T>,
   ...args: Parameters<T>
 ) {
+  if (!(callback instanceof Function)) {
+    throw new Error('Provide a callback function');
+  }
+
   const execTimer = timerType === 'setInterval' ? setInterval : setTimeout;
   const clearTimer = timerType === 'setInterval' ? clearInterval : clearTimeout;
 
@@ -56,21 +60,3 @@ export function cancelTimer<T extends Args>(
     clearTimer(timer);
   };
 }
-
-type Temp = (a: number, b: number, c: number) => number;
-
-const x = cancelTimer<Temp>(
-  {
-    timerType: 'setTimeout',
-    delay: 100,
-    callback: (a, b) => {
-      console.log(a + b);
-      return a + b;
-    },
-  },
-  1,
-  3,
-  5,
-);
-
-setTimeout(x, 2000);
