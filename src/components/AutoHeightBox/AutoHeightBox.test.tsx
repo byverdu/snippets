@@ -72,7 +72,7 @@ describe('AutoHeightBox', () => {
   });
 
   test('sets height based on viewport when no parentSelector is provided', () => {
-    render(<AutoHeightBox data-testid="box" />);
+    render(<AutoHeightBox data-testid="box" parentSelector="none" />);
     const box = screen.getByTestId('box');
 
     // 100vh - (top + DEFAULT_SPACING_GAP)
