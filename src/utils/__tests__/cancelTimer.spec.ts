@@ -1,6 +1,7 @@
 import { expect, test, vi } from 'vitest';
 
-import { cancelTimer } from '../cancelTimer';
+import { cancelTimer } from '@utils';
+
 describe('cancelTimer', () => {
   beforeEach(() => {
     vi.useFakeTimers();

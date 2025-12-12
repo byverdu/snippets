@@ -1,6 +1,6 @@
 import { expect, test, vi } from 'vitest';
 
-import { clampedValue } from '../clampedValue';
+import { clampedValue } from '@utils';
 
 describe('clampedValue', () => {
   test('should be defined', () => {

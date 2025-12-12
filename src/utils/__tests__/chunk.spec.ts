@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest';
 
-import { chunk } from '../chunk';
+import { chunk } from '@utils';
 
 describe('chunk', () => {
   test('should be defined', () => {

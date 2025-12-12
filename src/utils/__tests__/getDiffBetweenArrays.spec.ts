@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest';
 
-import { getDiffBetweenArrays } from '../getDiffBetweenArrays';
+import { getDiffBetweenArrays } from '@utils';
 
 describe('getDiffBetweenArrays', () => {
   test('should return empty array if no params', () => {
