@@ -8,7 +8,7 @@
  * sleep(500); // .5 secs
  * sleep(1500); // 1.5 sec
  */
-export function sleep(duration: number): Promise<void> {
+export function sleep(duration = 100): Promise<void> {
   return new Promise(resolve => {
     const timer = setTimeout(() => {
       clearTimeout(timer);

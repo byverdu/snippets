@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run --coverage",
-    "test:watch": "vitest",
+    "test:watch": "vitest --coverage",
     "prepare": "husky"
   },
   "lint-staged": {
