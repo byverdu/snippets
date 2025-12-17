@@ -18,7 +18,8 @@
     "jsx": "react-jsx",
     "paths": {
       "@constants": ["./constants"],
-      "@utils": ["./utils"]
+      "@utils": ["./utils"],
+      "@hooks": ["./hooks"]
     },
 
     /* Linting */
@@ -29,5 +30,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": ["src", "./types"]
 }

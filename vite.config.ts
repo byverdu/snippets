@@ -9,9 +9,11 @@ export default defineConfig({
     alias: {
       '@constants': path.resolve(__dirname, './src/constants'),
       '@utils': path.resolve(__dirname, './src/utils'),
+      '@hooks': path.resolve(__dirname, './src/hooks'),
     },
   },
   test: {
+    setupFiles: 'setupFile.ts',
     globals: true,
     environment: 'jsdom',
     css: true,
